@@ -69,6 +69,7 @@ import org.bukkit.loot.LootTable;
 import org.bukkit.map.MapView;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.messaging.Messenger;
+import org.bukkit.plugin.messaging.StandardMessenger;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.CachedServerIcon;
 import org.jetbrains.annotations.NotNull;
@@ -133,6 +134,8 @@ public class ServerMock extends Server.Spigot implements Server
 
 	private GameMode defaultGameMode = GameMode.SURVIVAL;
 	private ConsoleCommandSender consoleSender;
+
+	private Messenger messenger = new StandardMessenger();
 
 	public ServerMock()
 	{
@@ -1101,8 +1104,7 @@ public class ServerMock extends Server.Spigot implements Server
 	@Override
 	public Messenger getMessenger()
 	{
-		// TODO Auto-generated method stub
-		throw new UnimplementedOperationException();
+		return messenger;
 	}
 
 	@Override
