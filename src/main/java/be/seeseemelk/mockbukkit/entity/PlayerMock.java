@@ -112,6 +112,8 @@ public class PlayerMock extends LivingEntityMock implements Player, SoundReceive
 	private boolean sprinting = false;
 	private boolean flying = false;
 	private boolean whitelisted = true;
+
+	private boolean allowFlight = false;
 	private InventoryView inventoryView;
 
 	private Location compassTarget;
@@ -1466,15 +1468,13 @@ public class PlayerMock extends LivingEntityMock implements Player, SoundReceive
 	@Override
 	public boolean getAllowFlight()
 	{
-		// TODO Auto-generated method stub
-		throw new UnimplementedOperationException();
+		return this.allowFlight;
 	}
 
 	@Override
 	public void setAllowFlight(boolean flight)
 	{
-		// TODO Auto-generated method stub
-		throw new UnimplementedOperationException();
+		this.allowFlight = flight;
 	}
 
 	@Override
