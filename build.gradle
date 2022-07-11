@@ -72,11 +72,11 @@ jacocoTestReport {
 }
 
 jacoco {
-	toolVersion = "0.8.6"
+    toolVersion = "0.8.6"
 }
 
 group = 'com.github.seeseemelk'
-version = gradle.ext.version
+version = "1.0.0-SNAPSHOT"
 
 publishing {
     publications {
@@ -115,19 +115,11 @@ publishing {
 
     repositories {
         maven {
-            name = 'repository'
-            url = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+            name = "naluwan"
+            url = "https://repo.naluwan.net/snapshot"
             credentials {
-                username = findProperty('ossrhUsername')
-                password = findProperty('ossrhPassword')
-            }
-        }
-        maven {
-            name = 'snapshotRepository'
-            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
-            credentials {
-                username = findProperty('ossrhUsername')
-                password = findProperty('ossrhPassword')
+                username = findProperty('naluwanUsername')
+                password = findProperty('naluwanPassword')
             }
         }
     }
