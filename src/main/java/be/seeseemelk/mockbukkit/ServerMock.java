@@ -1162,8 +1162,7 @@ public class ServerMock extends Server.Spigot implements Server
 	@Override
 	public WarningState getWarningState()
 	{
-		// TODO Auto-generated method stub
-		throw new UnimplementedOperationException();
+		return WarningState.DEFAULT;
 	}
 
 	@Override
